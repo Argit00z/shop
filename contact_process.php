@@ -1,4 +1,5 @@
 <?php
+include 'header.php';
 include 'db.php';
 
 $name = $_POST['name'];
@@ -13,4 +14,5 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
+include 'footer.php';
 ?>

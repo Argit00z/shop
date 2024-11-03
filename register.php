@@ -22,7 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($stmt->execute()) {
             // Перенаправление на index.php
-            header("Location: index.php");
+            echo "<div>Регистрация прошла успешно. Вы будете перенаправлены на главную страницу.</div>";
+            echo "<script>setTimeout(function() { window.location.href = 'index.php'; }, 3000);</script>";
             exit();
         } else {
             echo "<div>Ошибка при регистрации: " . $stmt->error . "</div>";

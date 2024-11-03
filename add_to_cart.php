@@ -1,5 +1,9 @@
 <?php
-session_start();
+
+include 'header.php';
+
+
+
 include 'db.php';
 
 
@@ -29,12 +33,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($stmt->execute()) {
-        echo "Товар добавлен в корзину!";
+        echo "<script>alert('Товар успешно добавлен в корзину!'); window.location.href='shop.php';</script>";
     } else {
-        echo "Ошибка: " . $stmt->error;
+        echo "<script>alert('Ошибка при добавлении товара в корзину: " . $stmt->error . "'); window.location.href='shop.php';</script>";
     }
-
     $stmt->close();
     $conn->close();
 }
+
+include 'footer.php';
+
 ?>

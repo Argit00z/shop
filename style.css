@@ -1,9 +1,29 @@
 /* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+}
+
+header, main, footer {
+  padding: 20px;
+}
+
+main {
+  flex: 1; /* Этот элемент растет, чтобы занять все доступное пространство */
 }
 
 header {
@@ -12,8 +32,13 @@ header {
   padding: 10px 0;
 }
 
-.slide{
-  width: 100px;
+
+.img_slide{
+  width: 50%;
+}
+
+.slideshow-container{
+  padding-top: 50px;
 }
 
 .navbar {
@@ -42,22 +67,36 @@ header {
 
 main {
   padding: 20px;
+  text-align: center;
+}
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
+button:hover {
+  background-color: #0056b3;
+}
 .products {
   padding: 20px;
   max-width: 1200px;
   margin: auto;
 }
 
-.product-row {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  gap: 20px;
+.product-list {
+  display: inline-flex;
+  
+  
 }
 
 .product-item {
+  margin: 10px;
+  display: block;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -120,4 +159,43 @@ main {
 .products1{
   display: flex;
   flex-wrap: wrap;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 944px; /* Занимает всю высоту окна браузера */
+}
+
+.hero{
+  text-align: center;
+}
+
+.slideshow-container{
+  display: inline-block;
+
+  text-align: center;
+}
+
+.details-button{
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  margin-top: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.details-button:hover{
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }

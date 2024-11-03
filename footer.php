@@ -1,5 +1,9 @@
 <!-- footer.php -->
-<footer>
-  <p>Контакты: info@shop.com | Телефон: +123456789</p>
-  <p>&copy; 2024 ShopName. Все права защищены.</p>
-</footer>
+    </main>   
+    <footer>
+      <p>Контакты: sport@shop.com | Телефон: +799999999</p>
+      <p style="padding-top: 3px;">&copy; 2024 SportShop.</p>
+    </footer>
+    </div>
+  </body>
+</html>
